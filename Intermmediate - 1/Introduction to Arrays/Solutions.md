@@ -1,7 +1,7 @@
 # Count of elements
 ## Q1: Given an array A of N integers. Count the number of elements that have at least 1 elements greater than itself.
 
-**arr: -3, 2, 6, 8, 4, 5** 
+**arr: -3, 2, 6, 8, 4, 5, 8** 
 
 *Clearly, all elements will follow the condition except the maximum one.*
 
