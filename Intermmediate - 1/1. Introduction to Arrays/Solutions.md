@@ -24,9 +24,9 @@ public class Solution
 
 		for(int i = 0; i < n; i++)
 		{
-            		if(max < arr[I])
+            		if(max < arr[i])
             		{
-				max = arr[I];
+				max = arr[i];
             		}
         	}
 
