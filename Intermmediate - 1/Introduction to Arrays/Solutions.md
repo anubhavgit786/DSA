@@ -1,4 +1,5 @@
-Q1: Given an array A of N integers. Count the number of elements that have at least 1 elements greater than itself.
+# Count of elements
+## Q1: Given an array A of N integers. Count the number of elements that have at least 1 elements greater than itself.
 
 ```java
 public class Solution
