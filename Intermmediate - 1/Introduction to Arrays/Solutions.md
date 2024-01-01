@@ -3,7 +3,7 @@
 
 **arr: -3, 2, 6, 8, 4, 5, 8** 
 
-*Clearly, all elements will follow the condition except the maximum one.*
+*Clearly, all elements will follow the condition except the maximum one. We have total 7 integers. The count of maximmum integers is 2. So, the answer will be 7 - 2 = 5.*
 
 ```java
 public class Solution
