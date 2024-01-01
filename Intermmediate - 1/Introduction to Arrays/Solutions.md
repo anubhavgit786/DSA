@@ -4,7 +4,7 @@ Given an array A of N integers.
 Count the number of elements that have at least 1 elements greater than itself.
 ```
 ~~~
-PayTM
+**PayTM**
 ~~~
 
 **arr: -3, 2, 6, 8, 4, 5, 8** 
