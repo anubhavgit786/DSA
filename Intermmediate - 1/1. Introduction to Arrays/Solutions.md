@@ -132,3 +132,44 @@ TC: O(n)
 SC: O(1)
 ~~~
 ---
+
+# Q4: Max Min of an Array
+
+**Problem Description**
+
+```
+Given an array A of size N. You need to find the sum of Maximum and Minimum element in the given array.
+```
+
+~~~java
+
+public class Solution
+{
+	public int solve(int[] A) 
+    {
+		int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        
+		for(int i = 0 ; i < A.length; i++ )
+        {
+            if(max < A[i])
+            {
+                max = A[i];
+            }
+
+            if(A[i] < min)
+            {
+                min = A[i];
+            }
+        }
+
+        return max + min;
+    }
+}
+~~~
+
+~~~
+TC: O(n)
+SC: O(1)
+~~~
+---
