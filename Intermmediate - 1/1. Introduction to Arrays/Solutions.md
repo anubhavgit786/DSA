@@ -64,19 +64,22 @@ OYO
 
 ```java
 
-public int[] solve(int[] A, int B, int C)
+public class Solution
 {
-	int i = B, j = C;
-	
-	while(i < j)
+	public int[] solve(int[] A, int B, int C)
 	{
-		int temp = A[i];
-		A[i] = A[j];
-		A[j] = temp;
-		i++;
-		j--;
+		int i = B, j = C;
+	
+		while(i < j)
+		{
+			int temp = A[i];
+			A[i] = A[j];
+			A[j] = temp;
+			i++;
+			j--;
+		}
+		return A;
 	}
-	return A;
 }
 
 ```
@@ -96,28 +99,36 @@ Given an integer array A of size N and an integer B, you have to return the same
 ```
 
 ~~~
-Amazon, Adobe, Apple, Google, Accenture, Uber, Zoho, Walmart Labs, Goldman Sachs, Microsoft, Yahoo, Facebook, SAP, TCS, LinkedIn, Bloomberg, Cohesity, Salesforce, Infosys, 
+Amazon, Adobe, Apple, Google, Accenture, Uber, Zoho, Walmart Labs, Goldman Sachs, Microsoft, Yahoo, Facebook, SAP, TCS, LinkedIn, Bloomberg, Cohesity, Salesforce, Infosys. 
 ~~~
 
 ```java
-public void rotate(int arr[], int start, int end)
-    {
-        while(start < end)
-        {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
-        }
-    }
+public class Solution
+{
+	public void rotate(int arr[], int start, int end)
+	{
+    	while(start < end)
+    	{
+        	int temp = arr[start];
+        	arr[start] = arr[end];
+        	arr[end] = temp;
+        	start++;
+        	end--;
+    	}
+	}
 
-    public int[] solve(int[] arr, int b) 
-    {
-        b = b % arr.length;
-        rotate(arr, 0, arr.length-1);
-        rotate(arr, 0, b-1);
-        rotate(arr, b, arr.length-1);
-        return arr;
-    }
+	public int[] solve(int[] A, int B) 
+	{
+		B = B % A.length;
+		rotate(A, 0, A.length-1);
+		rotate(A, 0, B-1);
+		rotate(A, B, B.length-1);
+    	return A;
+	}
+}
 ```
+~~~
+TC: O(n)
+SC: O(1)
+~~~
+---
