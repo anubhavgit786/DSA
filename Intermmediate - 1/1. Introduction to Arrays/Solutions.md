@@ -224,16 +224,28 @@ public class Solution
 {
 	public int solve(int[] A) 
     {
-        int index = 1;
-        for(int i = 0; i < A.length; i++)
-        {
-            if(A[i]==B)
-            {
-                count++;
+		int index = 0, n = A.length;
+		
+		// This will give us the maximum element of A
+        for(int i = 1; i < n; i++)
+		{
+            if(A[index] < A[i])
+			{
+                index = i;
             }
         }
-
-        return count;
+        
+        int ans = -1;
+        // This will give us maximum element of A which is less than A[index]
+        for(int i = 0; i < n; i++)
+		{
+            if(A[i] != A[index])
+			{
+                ans = Math.max(ans, A[i]);
+            }
+        }
+        
+        return ans;
     }
 }
 ~~~
