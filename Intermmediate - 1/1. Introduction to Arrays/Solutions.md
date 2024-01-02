@@ -341,7 +341,7 @@ public class Solution
 ~~~
 
 ~~~
-TC: O(n)
+TC: O(N x M), where N is the length of array A, and M is the number of queries.
 SC: O(1)
 ~~~
 ---
