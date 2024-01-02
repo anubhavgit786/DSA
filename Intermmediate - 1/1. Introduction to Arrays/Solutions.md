@@ -20,15 +20,15 @@ public class Solution
 	public int count(int []arr)
 	{
 		int max = Integer.MIN_VALUE;
-        int n = arr.length;
+        	int n = arr.length;
 
 		for(int i = 0; i < n; i++)
 		{
-            if(max < arr[i])
-            {
-				max = arr[i];
-            }
-        }
+            		if(max < arr[I])
+            		{
+				max = arr[I];
+            		}
+        	}
 
 		int count = 0;
 
@@ -41,7 +41,7 @@ public class Solution
 		}
 
 		return n-count;
-    }
+    	}
 }
 ```
 ~~~
@@ -107,14 +107,14 @@ public class Solution
 {
 	public void rotate(int arr[], int start, int end)
 	{
-    	while(start < end)
-    	{
-        	int temp = arr[start];
-        	arr[start] = arr[end];
-        	arr[end] = temp;
-        	start++;
-        	end--;
-    	}
+    		while(start < end)
+    		{
+        		int temp = arr[start];
+        		arr[start] = arr[end];
+        		arr[end] = temp;
+        		start++;
+        		end--;
+    		}
 	}
 
 	public int[] solve(int[] A, int B) 
@@ -123,7 +123,7 @@ public class Solution
 		rotate(A, 0, A.length-1);
 		rotate(A, 0, B-1);
 		rotate(A, B, B.length-1);
-    	return A;
+    		return A;
 	}
 }
 ```
@@ -146,25 +146,25 @@ Given an array A of size N. You need to find the sum of Maximum and Minimum elem
 public class Solution
 {
 	public int solve(int[] A) 
-    {
+    	{
 		int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
+        	int min = Integer.MAX_VALUE;
         
 		for(int i = 0 ; i < A.length; i++ )
-        {
-            if(max < A[i])
-            {
-                max = A[i];
-            }
+        	{
+            		if(max < A[I])
+            		{
+                		max = A[I];
+            		}
 
-            if(A[i] < min)
-            {
-                min = A[i];
-            }
-        }
+            		if(A[i] < min)
+            		{
+                		min = A[I];
+            		}
+        	}
 
-        return max + min;
-    }
+        	return max + min;
+    	}
 }
 ~~~
 
@@ -187,18 +187,18 @@ Given an array A and an integer B, find the number of occurrences of B in A.
 public class Solution 
 {
 	public int solve(int[] A, int B) 
-    {
-        int count = 0;
-        for(int i = 0; i < A.length; i++)
-        {
-            if(A[i]==B)
-            {
-                count++;
-            }
-        }
+    	{
+        	int count = 0;
+        	for(int i = 0; i < A.length; i++)
+        	{
+            		if(A[i]==B)
+            		{
+                		count++;
+            		}
+        	}
 
-        return count;
-    }
+        	return count;
+    	}
 }
 ~~~
 
@@ -223,30 +223,31 @@ Return the second largest element. If no such element exist then return -1.
 public class Solution 
 {
 	public int solve(int[] A) 
-    {
+    	{
 		int index = 0, n = A.length;
-		
+
 		// This will give us the maximum element of A
-        for(int i = 1; i < n; i++)
+        	for(int i = 1; i < n; i++)
 		{
-            if(A[index] < A[i])
+            		if(A[index] < A[i])
 			{
-                index = i;
-            }
-        }
+                		index = I;
+            		}
+        	}
         
-        int ans = -1;
-        // This will give us maximum element of A which is less than A[index]
-        for(int i = 0; i < n; i++)
+        	int ans = -1;
+
+		// This will give us maximum element of A which is less than A[index]
+        	for(int i = 0; i < n; i++)
 		{
-            if(A[i] != A[index])
+            		if(A[i] != A[index])
 			{
-                ans = Math.max(ans, A[i]);
-            }
-        }
+                		ans = Math.max(ans, A[I]);
+            		}
+        	}
         
-        return ans;
-    }
+        	return and;
+    	}
 }
 ~~~
 
@@ -270,24 +271,24 @@ Find the minimum time in seconds to make all elements of the array equal.
 public class Solution 
 {
 	public int solve(int[] A) 
-    {
-        int count = 0; 
-        int max = Integer.MIN_VALUE;
-        for(int i = 0; i < A.length; i++)
-        {
-            if(max < A[i])
-            {
-                max = A[i];
-            }
-        }
+    	{
+        	int count = 0; 
+        	int max = Integer.MIN_VALUE;
+        	for(int i = 0; i < A.length; i++)
+        	{
+            		if(max < A[I])
+            		{
+                		max = A[I];
+            		}
+        	}
 
-        for(int i = 0; i < A.length; i++)
-        {
-            count = count + max - A[i];
-        }
+        	for(int i = 0; i < A.length; i++)
+        	{
+            		count = count + max - A[I];
+        	}
 
-        return count;
-    }
+        	return count;
+    	}
 }
 ~~~
 
