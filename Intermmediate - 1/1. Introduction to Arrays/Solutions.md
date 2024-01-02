@@ -173,3 +173,73 @@ TC: O(n)
 SC: O(1)
 ~~~
 ---
+
+# Q5: Linear Search - Multiple Occurences
+
+**Problem Description**
+
+~~~
+Given an array A and an integer B, find the number of occurrences of B in A.
+~~~
+
+~~~java
+
+public class Solution 
+{
+	public int solve(int[] A, int B) 
+    {
+        int count = 0;
+        for(int i = 0; i < A.length; i++)
+        {
+            if(A[i]==B)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+~~~
+
+~~~
+TC: O(n)
+SC: O(1)
+~~~
+---
+
+# Q6:  Second Largest
+
+
+**Problem Description**
+
+~~~
+You are given an integer array A. You have to find the second largest element/value in the array or report that no such element exists.
+Return the second largest element. If no such element exist then return -1.
+~~~
+
+~~~java
+
+public class Solution 
+{
+	public int solve(int[] A) 
+    {
+        int index = 1;
+        for(int i = 0; i < A.length; i++)
+        {
+            if(A[i]==B)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+~~~
+
+~~~
+TC: O(n)
+SC: O(1)
+~~~
+---
