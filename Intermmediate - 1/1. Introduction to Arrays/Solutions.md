@@ -255,3 +255,95 @@ TC: O(n)
 SC: O(1)
 ~~~
 ---
+
+# Q7: Time to equality
+
+**Problem Description**
+
+~~~
+Given an integer array A of size N. In one second, you can increase the value of one element by 1.
+Find the minimum time in seconds to make all elements of the array equal.
+~~~
+
+~~~java
+
+public class Solution 
+{
+	public int solve(int[] A) 
+    {
+        int count = 0; 
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i < A.length; i++)
+        {
+            if(max < A[i])
+            {
+                max = A[i];
+            }
+        }
+
+        for(int i = 0; i < A.length; i++)
+        {
+            count = count + max - A[i];
+        }
+
+        return count;
+    }
+}
+~~~
+
+~~~
+TC: O(n)
+SC: O(1)
+~~~
+---
+
+
+# Q8: Range Sum Query - II
+
+**Problem Description**
+
+~~~
+You are given an integer array A of length N.
+You are also given a 2D integer array B with dimensions M x 2, where each row denotes a [L, R] query.
+For each query, you have to find the sum of all elements from L to R indices in A (0 - indexed).
+More formally, find A[L] + A[L + 1] + A[L + 2] +... + A[R - 1] + A[R] for each query.
+~~~
+
+~~~
+A = [1, 2, 3, 4, 5]
+B = [[0, 3], [1, 2]]
+Output: [10, 5]
+~~~
+
+~~~java
+
+public class Solution 
+{
+    public int[] solve(int[] A, int[][] B) 
+    {
+        int result[] = new int[B.length];
+        for(int i = 0; i < B.length; i++)
+        {
+            int start = B[i][0];
+            int end = B[i][1];
+            int sum = 0;
+            for(int j = start; j<=end; j++)
+            {
+                sum = sum + A[j];
+            }
+            result[i] = sum;
+        }
+
+        return result;
+    }
+}
+
+~~~
+
+~~~
+TC: O(n)
+SC: O(1)
+~~~
+---
+
+
